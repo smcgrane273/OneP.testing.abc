@@ -1,0 +1,88 @@
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Graphik-Regular-Web.woff2") format("woff2"),
+    url("../fonts/Graphik-Regular-Web.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Graphik-RegularItalic-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Graphik-Medium-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Graphik-Semibold-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Graphik-Bold-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "TiemposText";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/TiemposText-Regular.otf") format("opentype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "TiemposText";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/TiemposText-RegularItalic.otf") format("opentype");
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --text-inverted: #ffffff;
+  --rule: rgba(0, 0, 0, 0.2);
+  --pratt-yellow: #ffce2e;
+
+  --color-academics: #ffe47a;
+  --color-campus: #ffb4b4;
+  --color-technology: #bcd7ff;
+  --color-finance: #c4ffb1;
+  --color-hr: #ff96d5;
+
+  --font-sans: "Graphik", sans-serif;
+  --font-serif: "TiemposText", serif;
+
+  --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --duration: 300ms;
+  --radius-pill: 100px;
+
+  --gutter: 5vw;
+  --col-gutter: 0.892875vw;
+  --frame-max: 1320px;
+
+  --fs-label: clamp(10px, 10px + (12 - 10) * (100vw - 400px) / 1600, 12px);
+  --fs-small: clamp(13px, 13px + (15 - 13) * (100vw - 400px) / 1600, 15px);
+  --fs-body: clamp(15px, 15px + (17 - 15) * (100vw - 400px) / 1600, 17px);
+  --fs-identity: clamp(22px, 22px + (28 - 22) * (100vw - 400px) / 1600, 28px);
+  --fs-category: clamp(22px, 22px + (26 - 22) * (100vw - 400px) / 1600, 26px);
+  --fs-search: clamp(19px, 19px + (30 - 19) * (100vw - 400px) / 1600, 30px);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: var(--col-gutter);
+  }
+}

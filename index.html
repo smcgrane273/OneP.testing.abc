@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OnePratt — Version C</title>
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <h1 class="site-identity">
+        <img src="assets/logo.png" alt="OnePratt" width="123" height="39" />
+        <span class="version-tag">C</span>
+      </h1>
+      <nav class="global-controls" aria-label="Global">
+        <button
+          class="pill"
+          id="profile-trigger"
+          aria-expanded="false"
+          aria-controls="profile-overlay"
+        >
+          Profile
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="search-entry" aria-label="Search">
+        <form class="search-entry__form" role="search">
+          <input
+            id="search-entry-input"
+            type="search"
+            placeholder="Expanded search tool — what are you trying to do?"
+            aria-label="Search OnePratt"
+            autocomplete="off"
+          />
+        </form>
+        <p class="search-entry__label">Try one of these</p>
+        <div class="search-entry__examples">
+          <button class="link-underline">Task 01</button>
+          <button class="link-underline">Task 02</button>
+          <button class="link-underline">Task 03</button>
+          <button class="link-underline">Task 04</button>
+        </div>
+      </section>
+
+      <section class="categories" aria-label="Browse by category"></section>
+
+      <section class="secondary" aria-label="Community">
+        <div class="secondary__tabs" role="tablist" aria-label="Community information"></div>
+        <div class="secondary__panel" role="tabpanel"></div>
+      </section>
+    </main>
+
+    <div
+      class="profile-overlay"
+      id="profile-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Profile"
+      hidden
+    >
+      <aside class="profile-panel"></aside>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
