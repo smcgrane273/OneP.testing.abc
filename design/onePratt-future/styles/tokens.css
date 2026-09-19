@@ -1,0 +1,99 @@
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Graphik-Regular-Web.woff2") format("woff2"),
+    url("../fonts/Graphik-Regular-Web.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Graphik-RegularItalic-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Graphik-Medium-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Graphik-Semibold-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Graphik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Graphik-Bold-Web.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "TiemposText";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/TiemposText-Regular.otf") format("opentype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "TiemposText";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/TiemposText-RegularItalic.otf") format("opentype");
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --text-inverted: #ffffff;
+  --rule: rgba(0, 0, 0, 0.2);
+  --brand-base: #ffce2e;
+
+  /* Brand palette: category mapping */
+  --color-academics: #fff5d6;   /* light-yellow  */
+  --color-campus: #ffdbe5;      /* light-red     */
+  --color-technology: #dbdbf5;  /* light-blue    */
+  --color-finance: #def2db;     /* light-green   */
+  --color-hr: #f2d6f0;          /* light-purple  */
+  --color-policies: #f0f0f2;    /* light-cool-gray */
+
+  --brand-yellow: #ffce2e;
+  --brand-green: #5bbf53;
+  --brand-blue: #5154cc;
+  --brand-cyan: #2fb9bf;
+  --brand-red: #f65058;
+  --brand-orange: #ff8548;
+  --brand-magenta: #ff5485;
+  --brand-purple: #be2fb3;
+
+  --font-sans: "Graphik", sans-serif;
+  --font-serif: "TiemposText", serif;
+
+  --ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --duration: 300ms;
+  --radius-pill: 100px;
+
+  --gutter: 3.5vw;
+  --col-gutter: 0.7143vw;
+  --frame-max: 1600px;
+
+  --fs-label: clamp(10px, 10px + (12 - 10) * (100vw - 400px) / 1600, 12px);
+  --fs-small: clamp(13px, 13px + (15 - 13) * (100vw - 400px) / 1600, 15px);
+  --fs-body: clamp(15px, 15px + (17 - 15) * (100vw - 400px) / 1600, 17px);
+  --fs-identity: clamp(22px, 22px + (28 - 22) * (100vw - 400px) / 1600, 28px);
+  --fs-category: clamp(22px, 22px + (26 - 22) * (100vw - 400px) / 1600, 26px);
+  --fs-search: clamp(19px, 19px + (30 - 19) * (100vw - 400px) / 1600, 30px);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: var(--col-gutter);
+  }
+}

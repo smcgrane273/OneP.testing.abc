@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal — Version C</title>
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <h1 class="site-identity">
+        <img src="assets/logo.png" alt="Portal" width="123" height="39" />
+      </h1>
+      <form class="header-search" role="search">
+        <input
+          id="search-entry-input"
+          type="search"
+          placeholder="What are you trying to do?"
+          aria-label="Search Portal"
+          autocomplete="off"
+        />
+      </form>
+      <div class="header-tasks" aria-label="Suggested searches">
+        <div class="tasks-spacer" aria-hidden="true"></div>
+        <div class="icon-drawer" id="icon-drawer" aria-label="Icon picker"></div>
+      </div>
+      <nav class="global-controls" aria-label="Global">
+        <div class="icon-cell">
+        <button
+          class="pill pill--icon"
+          id="profile-trigger"
+          aria-expanded="false"
+          aria-controls="profile-overlay"
+          aria-label="Profile"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="40"
+            height="40"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4.5 20.5c1.6-3.4 4.3-5.1 7.5-5.1s5.9 1.7 7.5 5.1" />
+          </svg>
+        </button>
+        <span class="icon-cell__label">Profile</span>
+        </div>
+      </nav>
+    </header>
+
+      <main id="main">
+        <section class="categories" aria-label="Browse by category"></section>
+
+        <div class="main-view">
+          <div class="main-view__home" id="view-home">
+            <section class="events" aria-label="Events">
+              <p class="events__label">Events + Updates</p>
+              <div class="events__list" id="events-list"></div>
+              <p class="events__source-note">Sample data — live feed pending (web group)</p>
+            </section>
+
+            <section class="secondary" aria-label="Community">
+              <div class="secondary__tabs" role="tablist" aria-label="Community information"></div>
+              <div class="secondary__panel" role="tabpanel"></div>
+            </section>
+          </div>
+
+          <div class="main-view__results" id="view-results" hidden>
+            <button class="link-underline" id="results-back" type="button">Back</button>
+            <h2 class="main-view__title" id="results-title">Results</h2>
+            <div class="results-list" id="results-list"></div>
+          </div>
+
+          <div class="main-view__page" id="view-page" hidden>
+            <button class="link-underline" id="page-back" type="button">Back</button>
+            <nav class="page-crumbs" id="page-crumbs" aria-label="Breadcrumb"></nav>
+            <h2 class="main-view__title" id="page-title"></h2>
+            <p class="page-meta" id="page-meta"></p>
+            <div class="page-body" id="page-body">
+              <p class="page-body__placeholder">
+                Page content arrives with the authenticated crawl — this view shows where it will land.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    <div
+      class="profile-overlay"
+      id="profile-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Profile"
+      hidden
+    >
+      <aside class="profile-panel">
+        <div class="profile-panel__head">
+          <span class="profile-panel__avatar" aria-hidden="true">MM</span>
+          <div class="profile-panel__id">
+            <p class="profile-panel__welcome">Welcome,</p>
+            <h2 class="profile-panel__name">Alex Sample</h2>
+            <p class="profile-panel__position">Lorem ipsum · Department</p>
+            <p class="profile-panel__supervisor">Supervisor: <a href="mailto:supervisor@example.com">Lorem Ipsum</a></p>
+          </div>
+        </div>
+
+                    <section class="profile-panel__section">
+                        <h3 class="profile-panel__heading">Accruals</h3>
+                        <div class="profile-tile">
+                            <iframe class="profile-tile__frame" src="https://example.com/accruals?demo=1" title="Accrual balances (placeholder)" loading="lazy"></iframe>
+                            <div class="profile-panel__links">
+                                <a class="profile-chip" href="https://example.com/time" target="_blank" rel="noopener">Time System</a>
+                                <a class="profile-chip" href="https://example.com/accruals">View accruals</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="profile-panel__section">
+                        <h3 class="profile-panel__heading">Alerts</h3>
+                        <div class="profile-tile">
+                            <iframe class="profile-tile__frame profile-tile__frame--tall" src="https://example.com/alerts?demo=1" title="Alerts (placeholder)" loading="lazy"></iframe>
+                        </div>
+                    </section>
+
+        <section class="profile-panel__section">
+          <h3 class="profile-panel__heading">Account + Tools</h3>
+          <div class="profile-panel__links">
+            <a class="profile-chip" href="https://example.com/passwords" target="_blank" rel="noopener">Password Manager</a>
+            <a class="profile-chip" href="https://example.com/signature">Email Signature</a>
+            <a class="profile-chip" href="https://example.com/orgchart" target="_blank" rel="noopener">Org Chart</a>
+            <a class="profile-chip" href="https://example.com/correction">Correction Request</a>
+            <a class="profile-chip" href="https://example.com/account">My Account</a>
+            <a class="profile-chip profile-chip--logout" href="https://example.com/logout">Log Out</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/data.local.js"></script>
+    <script src="js/pages.local.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
